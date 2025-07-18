@@ -47,7 +47,7 @@ const Getintouch = () => {
                 className="w-full p-3 border rounded-md focus:ring focus:ring-[#321515]"
                 required
               />
-              <GitForm Con />
+              <GitForm Con={true} />
 
               <textarea
                 name="message"
