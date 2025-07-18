@@ -9,19 +9,36 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
+    "@react-leaflet/core": "^3.0.0",
+    "@sanity/image-url": "^1.1.0",
+    "@sanity/vision": "^4.0.1",
+    "countries-list": "^3.1.1",
+    "framer-motion": "^12.23.6",
+    "gsap": "^3.13.0",
+    "leaflet": "^1.9.4",
+    "leaflet-defaulticon-compatibility": "^0.1.2",
+    "lenis": "^1.3.7",
+    "next": "15.4.1",
+    "next-sanity": "^9.12.3",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "next": "15.4.1"
+    "react-icons": "^5.5.0",
+    "react-leaflet": "^5.0.0",
+    "react-scroll-parallax": "^3.4.5",
+    "react-typed": "^2.0.12",
+    "sanity": "^3.99.0",
+    "swiper": "^11.2.10"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.4.1",
-    "@eslint/eslintrc": "^3"
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }
