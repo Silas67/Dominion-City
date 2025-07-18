@@ -61,9 +61,13 @@ const Header = () => {
             <div>
               <div className=" hidden max-[1030px]:flex">
                 <motion.aside
-                  initial={{ x: "100vw" }}
-                  animate={{ x: navIsLive ? 0 : "200vw" }}
-                  transition={{ ease: "easeInOut", duration: 0.3 }}
+                  initial={{ y: -150, opacity: 0, x: 0 }}
+                  animate={{
+                    y: navIsLive ? 0 : -150,
+                    opacity: navIsLive ? 1 : 0,
+                    x: 0,
+                  }}
+                  transition={{ ease: "easeInOut", duration: 1 }}
                   className="sidebar relative"
                 >
                   <nav className="nav">
@@ -83,13 +87,14 @@ const Header = () => {
           </nav>
 
           {/* Call to Action Button */}
-          <div className="flex gap-7">
-            <button className="primary-button flex flex-row gap-1 justify-center items-center max-sm:hidden max-md:flex max-[690px]:flex hover:scale-105">
+          <div className="flex gap-7 items-center">
+            <Link href={"/contact"} className="hidden md:block">
               {" "}
-              <Link className="text-[10px]" href="/contact">
+              <button className="primary-button hover:scale-105">
+                {" "}
                 Join the family{" "}
-              </Link>
-            </button>
+              </button>
+            </Link>
 
             <div
               onClick={handleClick}

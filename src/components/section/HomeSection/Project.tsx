@@ -4,7 +4,7 @@ import Link from "next/link";
 import { BiPhone } from "react-icons/bi";
 import { CgMail } from "react-icons/cg";
 
-import img from "@/components/assets/Images/Project.jpg";
+import img1 from "@/components/assets/Images/Project.jpg";
 import Dropdown from "./Dropdown";
 import Motion from "@/hooks/Motion";
 
@@ -54,11 +54,11 @@ const Project = () => {
               className="relative text-center overflow-hidden rounded-md border border-primary/70
             "
             >
-              <Image src={img} alt="Church Building Project" />
-              <div className="group absolute w-full h-full inset-0 bg-black bg-opacity-0 hover:bg-opacity-70 z-10 transition-all duration-500 flex items-center justify-center">
+              <Image src={img1} alt="Church Building Project" />
+              <div className="group absolute w-full h-full inset-0 bg-black/10 hover:bg-black/60 z-10 transition-all duration-500 flex items-center justify-center">
                 <Link
                   href="/contact"
-                  className="group-hover:block hidden transition-all duration-200"
+                  className="group-hover:block hidden transition-discrete duration-200"
                 >
                   <button className="primary-button flex flex-row gap-1 justify-center items-center hover:scale-105 max-sm:hidden max-md:flex text-[12px]">
                     View Projects

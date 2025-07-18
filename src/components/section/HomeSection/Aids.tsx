@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import img from "@/components/assets/Images/testimony.png";
+
 import Dropdown from "./Dropdown";
 
 const Aids = () => {
   const [category, setCategory] = useState("");
   return (
-    <div className="w-full flexcent md:px-[100px] py-24 flex-col bg-blue-950 text-white gap-8 px-8">
+    <div className="w-full flexcent md:px-[100px] py-24 flex-col bg-background text-foreground gap-8 px-8">
       <motion.div
         initial={{ y: 20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -15,10 +15,10 @@ const Aids = () => {
         viewport={{ once: true }}
         className="text-center "
       >
-        <h1 className="font-semibold md:text-5xl font-heading text-3xl mb-3">
+        <h1 className="font-semibold md:text-5xl font-heading text-3xl mb-4 text-primary max-w-[700px]">
           Have A Prayer Request Or Testimony?
         </h1>
-        <p className="text-neutral-300 text-sm">
+        <p className="text-muted_foreground text-sm">
           {" "}
           Send us a message. Let us pray and rejoice with you
         </p>
@@ -32,7 +32,13 @@ const Aids = () => {
         className="w-full flex items-stretch justify-center gap-5 max-sm:flex-col"
       >
         <div className="w-1/2 max-sm:w-full overflow-hidden rounded-md">
-          <Image src={img} alt="/" className="object-cover w-full h-full" />
+          <Image
+            src={"/images/testimony.png"}
+            width={100}
+            height={100}
+            alt="/"
+            className="object-cover w-full h-full"
+          />
         </div>
 
         <div className="space-y-4 bg-primary p-8 rounded-xl  max-sm:p-6">
@@ -104,7 +110,7 @@ const Aids = () => {
             />
             <div>
               <textarea
-                className="w-full px-4 py-2 mt-1 border rounded-md text-primary h-32 placeholder:text-primary"
+                className="w-full px-4 py-2 mt-1 bg-background rounded-md text-primary h-32 placeholder:text-primary"
                 placeholder="Type a message..."
               ></textarea>
             </div>

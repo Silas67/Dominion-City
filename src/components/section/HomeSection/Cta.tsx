@@ -7,8 +7,8 @@ const Cta = () => {
   const { ref: videoRef } = useParallax<HTMLDivElement>({ speed: 7 });
 
   return (
-    <div className="w-full lg:h-screen flex items-center justify-center text-black py-24 bg-primary">
-      <div className="w-[90vw] rounded-3xl bg-[#d4e2fc] lg:h-[80vh] relative scale-[0.9] flex justify-around flex-row-reverse h-[50vh]">
+    <div className="w-full lg:h-screen flex items-center justify-center text-white py-24 bg-primary/20">
+      <div className="w-[90vw] rounded-3xl bg-primary lg:h-[80vh] relative scale-[0.9] flex justify-around flex-row-reverse h-[50vh]">
         {/* Left Text */}
         <div ref={textRef} className="lg:basis-1/2 flex items-center flex-col">
           <div className="text-8xl font-heading font-extrabold absolute md:-top-[70px] md:left-[30px] -top-[60px] left-[10px] text-white">
@@ -46,7 +46,7 @@ const Cta = () => {
             playsInline
             className="w-full h-full object-cover"
           >
-            <source src="/worship2.mp4" type="video/mp4" />
+            <source src="/videos/worship2.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>

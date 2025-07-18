@@ -66,10 +66,10 @@ const Giving = ({ Bg }: { Bg: boolean }) => {
                     viewport={{ once: true }}
                     className="w-full h-full flex items-center justify-center flex-col"
                   >
-                    <div className="lg:text-4xl sm:text-3xl text-white">
+                    <div className="lg:text-4xl sm:text-3xl text-white group-hover:text-secondary transition-all duration-500">
                       {item.icon}
                     </div>
-                    <div className="lg:text-2xl sm:text-xl text-white">
+                    <div className="lg:text-2xl sm:text-xl text-white group-hover:text-secondary transition-all duration-500">
                       {item.heading}
                     </div>
                     <Link href={"/"}>
@@ -100,13 +100,13 @@ const Giving = ({ Bg }: { Bg: boolean }) => {
               key={index}
               className="w-full flex items-center justify-center flex-col snap-center flex-shrink-0"
             >
-              <div className="relative w-[300px] h-[300px] overflow-hidden mask-container">
+              <div className="relative w-[300px] h-[300px] overflow-hidden mask-container group">
                 <Image
                   src={item.img}
                   alt="Image"
-                  className="object-cover w-full h-full"
+                  className="object-cover w-full h-full group-hover:scale-110 transition-all duration-500"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center flex-col">
+                <div className="absolute inset-0 bg-black/60 flex items-center justify-center flex-col group-hover:bg-black/70 transition-all duration-500">
                   <div className="text-4xl text-white">{item.icon}</div>
                   <div className="text-2xl text-white p-2">{item.heading}</div>
                   <Link href={"/"} passHref>
@@ -123,7 +123,7 @@ const Giving = ({ Bg }: { Bg: boolean }) => {
           ))}
         </div>
 
-        <div className="min-w-[100px]  flexbet mt-4 px-[8px]">
+        <div className="min-w-[100px] mt-4 px-[8px] hidden max-sm:flex items-center justify-between">
           <button onClick={() => scroll("left")}>&#8592;</button>
           <button onClick={() => scroll("right")}>&#8594;</button>
         </div>

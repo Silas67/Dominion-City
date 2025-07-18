@@ -41,7 +41,7 @@ const Breif = () => {
       {/* Patterns */}
       <div
         style={{
-          backgroundImage: 'url("/pattern2.png")',
+          backgroundImage: 'url("/images/pattern2.png")',
           backgroundRepeat: "repeat",
           backgroundSize: "auto",
         }}
