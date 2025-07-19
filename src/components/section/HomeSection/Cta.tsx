@@ -7,11 +7,11 @@ const Cta = () => {
   const { ref: videoRef } = useParallax<HTMLDivElement>({ speed: 7 });
 
   return (
-    <div className="w-full lg:h-screen flex items-center justify-center text-white py-24 bg-primary/20">
-      <div className="w-[90vw] rounded-3xl bg-primary lg:h-[80vh] relative scale-[0.9] flex justify-around flex-row-reverse h-[50vh]">
+    <div className="w-full lg:h-screen flex items-center justify-center text-white py-24 max-mobile:bg-white bg-primary/20 max-mobile:py-8">
+      <div className="w-[90vw] rounded-3xl bg-primary lg:h-[80vh] relative scale-[0.9] flex justify-around flex-row-reverse h-[50vh] max-mobile:scale-[1]">
         {/* Left Text */}
         <div ref={textRef} className="lg:basis-1/2 flex items-center flex-col">
-          <div className="text-8xl font-heading font-extrabold absolute md:-top-[70px] md:left-[30px] -top-[60px] left-[10px] text-white">
+          <div className="text-8xl font-heading font-extrabold absolute md:-top-[70px] md:left-[30px] -top-[40px] left-[10px] max-mobile:text-primary/80 text-white max-mobile:text-7xl">
             Join Us
           </div>
 
@@ -34,10 +34,9 @@ const Cta = () => {
         </div>
 
         {/* Right Video */}
-
         <div
           ref={videoRef}
-          className="md:w-[500px] lg:h-full rounded-3xl overflow-hidden lg:relative lg:-top-9 lg:right-9 h-[200px]  md:h-[400px] md:-bottom-6 hidden md:block"
+          className="md:w-[500px] lg:h-full rounded-3xl overflow-hidden lg:relative lg:-top-9 lg:right-9 h-[200px] md:h-[400px] md:-bottom-6 md:block hidden"
         >
           <video
             autoPlay
@@ -49,6 +48,21 @@ const Cta = () => {
             <source src="/videos/worship2.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
+        </div>
+
+        {/* Small devices */}
+        <div className="hidden max-mobile:block absolute w-full h-full inset-0 overflow-hidden rounded-3xl -z-10 ">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+          >
+            <source src="/videos/worship2.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div className="absolute inset-0 bg-black/70 w-full h-full"></div>
         </div>
       </div>
     </div>
